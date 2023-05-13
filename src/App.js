@@ -1,0 +1,30 @@
+import Expenses from "./components/Expenses";
+
+function App() {
+    const expenses = [
+        {
+            id: 1,
+            title: "React course",
+            amount: 499,
+            date: new Date(Date.UTC(2023, 4, 10)),
+        },
+        {
+            id: 2,
+            title: "Javascript course",
+            amount: 499,
+            date: new Date(Date.UTC(2023, 3, 1)),
+        },
+    ];
+    // console.log(expenses);
+    // const month = expenses[0].date.toLocalDateString("en-US", { timeZone: 'UTC', hour12:true,day:'numeric' ,month:'long', year:'numeric',});
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1>Hello React</h1>
+                <Expenses expenses={expenses} />
+            </header>
+        </div>
+    );
+}
+
+export default App;
