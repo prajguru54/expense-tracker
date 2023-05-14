@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import Chart from './components/ExpenseChart/Chart'
 
 const defaultExpenses = [
     {
@@ -33,6 +34,7 @@ function App() {
             <header className="App-header">
                 <h1>Hello React</h1>
                 <NewExpense onAddExpense={onAddExpenseHandler} />
+                <Chart expenses = {expenses}/>
                 <Expenses expenses={expenses} />
             </header>
         </div>
